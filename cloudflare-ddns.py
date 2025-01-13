@@ -173,7 +173,7 @@ def commitRecord(ip):
                     response = cf_api(
                         "zones/" + option['zone_id'] +
                         "/dns_records/" + identifier,
-                        "PUT", option, {}, record)
+                        "PATCH", option, {}, record)
             else:
                 print("➕ Adding new record " + str(record))
                 response = cf_api(
